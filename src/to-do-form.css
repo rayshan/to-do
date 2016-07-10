@@ -1,0 +1,51 @@
+#to-do-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
+
+#to-do-form > * {
+    height: 100%;
+}
+
+
+#to-do-form input[type=text],
+.react-date-field {
+    border: none !important;
+    border-bottom: 1px solid var(--gray4) !important;
+    padding: 0;
+}
+
+#to-do-form input[type=text]:focus {
+    outline: none;
+}
+
+#to-do-form input[type=text] {
+    flex: 1;
+    margin: 0 1rem 0 3rem;
+    font-size: 1rem;
+    /* Remove default box-shadow for input in Firefox */
+    box-shadow: none;
+}
+
+.react-date-picker__calendar--theme-default {
+    font-size: 0.7rem !important;
+}
+
+.react-date-field input {
+    font-size: .8rem !important;
+}
+
+#to-do-form button[type=submit] {
+    width: 2rem;
+    background: transparent;
+    border: none;
+}
+
+#to-do-form button[type=submit] svg {
+    width: 100%;
+    height: 100%;
+    fill: black;
+    transform: scale(0.9);
+}

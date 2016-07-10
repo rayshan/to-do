@@ -1,0 +1,81 @@
+#to-do-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.to-do-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.to-do-item:hover {
+    background-color: var(--gray1);
+}
+
+.checkbox {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    margin: .5rem;
+    border: 1px solid var(--gray4);
+}
+
+.checkbox:after {
+    content: url('data:image/svg+xml;utf8,<svg fill="green" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+    transform: scale(1.4) translateX(12%) translateY(-5%);
+    opacity: 0;
+    transition: opacity 100ms;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.checkbox:active:after {
+    opacity: .4 !important;
+}
+
+.checkbox:checked:after {
+    opacity: 1;
+}
+
+.checkbox:checked ~ .checkbox-label,
+.checkbox:checked ~ .expiration {
+    opacity: .4;
+    text-decoration: line-through;
+}
+
+.checkbox-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.expiration {
+    width: 6rem;
+    text-align: right;
+    font-size: .8rem;
+    color: var(--gray4);
+}
+
+.expiration.is-expired {
+    color: var(--red1);
+}
+
+.delete-button {
+    background: transparent;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    margin: .5rem;
+    opacity: .4;
+}
+
+.delete-button:hover,
+.delete-button:focus {
+    opacity: 1;
+}
+
+.delete-button svg {
+    transform: scale(0.9);
+    fill: var(--red1);
+}
