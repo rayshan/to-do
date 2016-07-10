@@ -8,7 +8,7 @@ ToDo
 
 **Known issues**
 
-- Custom checkbox styling falls back to default HTML5 styling due to https://bugzilla.mozilla.org/show_bug.cgi?id=605985
+- Firefox - custom checkbox styling falls back to default HTML5 styling due to https://bugzilla.mozilla.org/show_bug.cgi?id=605985
 
 
 ## Development
